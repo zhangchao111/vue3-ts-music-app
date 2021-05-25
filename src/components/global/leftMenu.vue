@@ -27,6 +27,57 @@
                 </div>
             </div>
         </div>
+        <div class="l-userList">
+            <div class="l-user">
+                <div class="l-avator">
+                    <div class="warp">
+                        <van-image
+                                round
+                                fit="cover"
+                                width="0.8rem"
+                                height="0.8rem"
+                                loading-icon="user-circle-o"
+                                error-icon="user-circle-o"
+                                src="https://im.yzcdn.cn/vant/cat.jpeg"
+                        >
+                        </van-image>
+                    </div>
+                    <div class="l-name">
+                        13534534513
+                    </div>
+                </div>
+                <div class="l-sign">
+                    <span class="warp">
+                        <span class="icon m_iconfont m_iconhuiyuan"></span>
+                        <i> 签到</i>
+                    </span>
+                </div>
+            </div>
+            <van-grid :border="false" :column-num="4" class="l-grid">
+                <van-grid-item badge="9" text="我的消息">
+                    <template v-slot:icon>
+                        <span class="icon m_iconfont m_iconxiaoxi"></span>
+                    </template>
+
+                </van-grid-item>
+                <van-grid-item text="我的好友">
+                    <template v-slot:icon>
+                        <span class="icon m_iconfont m_iconyonghu2"></span>
+                    </template>
+                </van-grid-item>
+                <van-grid-item text="个人主页">
+                    <template v-slot:icon>
+                        <span class="icon m_iconfont m_iconyonghu"></span>
+                    </template>
+                </van-grid-item>
+                <van-grid-item text="个性装扮">
+                    <template v-slot:icon>
+                        <span class="icon m_iconfont m_iconhuanfu"></span>
+                    </template>
+                </van-grid-item>
+            </van-grid>
+
+        </div>
     </div>
 
 </div>
