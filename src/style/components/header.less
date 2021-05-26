@@ -17,188 +17,275 @@
   height:100%;
   position: relative;
   overflow: hidden;
-  background: -webkit-linear-gradient(left, #707070 , #555555); /* Safari 5.1 - 6.0 */
-  background: -o-linear-gradient(right, #707070, #555555); /* Opera 11.1 - 12.0 */
-  background: -moz-linear-gradient(right, #707070, #555555); /* Firefox 3.6 - 15 */
-  background: linear-gradient(to right, #707070 , #555555); /* 标准的语法 */
+  background: -webkit-linear-gradient(left, #787878 , #525252); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #787878, #525252); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #787878, #525252); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #787878 , #525252); /* 标准的语法 */
   .l-warp{
     width:100%;
-    height:auto;
+    height:101%;
     position: relative;
-    .l-banner{
-      width:90%;
-      margin:0px auto;
-      margin-top:0.4rem;
-      border-radius: 5px 5px 0px 0px;
-      box-shadow: 0px 0px 15px #545454;
-      box-sizing: border-box;
-      border:1px solid #848482;
-      border-bottom:0px;
-      background: -webkit-linear-gradient(left, #7D7D7D , #5E5E5E); /* Safari 5.1 - 6.0 */
-      background: -o-linear-gradient(right, #7D7D7D, #5E5E5E); /* Opera 11.1 - 12.0 */
-      background: -moz-linear-gradient(right, #7D7D7D, #5E5E5E); /* Firefox 3.6 - 15 */
-      background: linear-gradient(to right, #7D7D7D , #5E5E5E); /* 标准的语法 */
-      display: flex;
-      flex-direction: column;
-      z-index: 2;
-      padding-bottom:50px;
-      .l-musicbag{
-        padding:0.2rem 0.2rem 0.3rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        .l-left{
-          width:60%;
-          color:#CACACA;
-          .p-t{
-            font-size: 0.25rem;
-            line-height: 0.3rem;
-            font-weight: 600;
-          }
-          .p-c{
-            font-size: 0.2rem;
-            line-height: 0.3rem;
-          }
-        }
-        .l-right{
-          color:#676362;
-          span{
-            margin-top:8px;
-            padding:5px 13px;
-            display: inline-block;
-            border-radius: 0.20rem;
-            background: -webkit-linear-gradient(left, #FFE3DF , #D9B8B1); /* Safari 5.1 - 6.0 */
-            background: -o-linear-gradient(right, #FFE3DF, #D9B8B1); /* Opera 11.1 - 12.0 */
-            background: -moz-linear-gradient(right, #FFE3DF, #D9B8B1); /* Firefox 3.6 - 15 */
-            background: linear-gradient(to right, #FFE3DF , #D9B8B1); /* 标准的语法 */
-          }
-        }
-      }
-      .l-music-text{
-        padding:0.2rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-top:0.1rem;
-        background: rgba(255,255,255,0.1);
-        .l-left{
-          width:80%;
-          .p-t{
-            font-size: 0.22rem;
-            color:#F8DDD9;
-            line-height: 0.3rem;
-            font-weight: 600;
-          }
-          .p-c{
-            color:#C2C2C2;
-            line-height: 0.3rem;
-          }
-        }
-        .l-middle{
-          width:15%;
-          align-items:center;
-          .warp{
-            display: inline-block;
-            padding:5px;
-            background:#E24804 ;
-            color:#fff;
-            text-align: center;
-            border-radius: 3px;
-            font-size: 0.16rem;
-          }
-        }
-        .l-right{
-          align-items: center;
-          margin-top:0.15rem;
-          .l-icon{
-            font-size: 0.3rem;
-          }
-
-        }
-      }
-    }
-    .l-userList{
+    overflow-y: auto;
+    z-index: 3;
+    zoom:1;
+    .warp{
       width:100%;
-      height:auto;
       position: relative;
-      background: #fff;
-      border-radius: 0.15rem 0.15rem 0px 0px;
-      z-index: 5;
-      top:-1rem;
-      padding:0.1rem 0.2rem;
-      display: flex;
-      flex-direction: column;
-      .l-user{
+      .l-banner{
+        width:90%;
+        margin:0px auto;
+        margin-top:0.4rem;
+        border-radius: 5px 5px 0px 0px;
+        box-shadow: 0px 0px 15px #545454;
+        box-sizing: border-box;
+        border:1px solid #848482;
+        border-bottom:0px;
+        background: -webkit-linear-gradient(left, #808080 , #5D5D5D); /* Safari 5.1 - 6.0 */
+        background: -o-linear-gradient(right, #808080, #5D5D5D); /* Opera 11.1 - 12.0 */
+        background: -moz-linear-gradient(right, #808080, #5D5D5D); /* Firefox 3.6 - 15 */
+        background: linear-gradient(to right, #808080 , #5D5D5D); /* 标准的语法 */
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding:0.2rem 0px;
-        margin-bottom:0.2rem;
-        .l-avator{
-          width:70%;
+        flex-direction: column;
+        z-index: 2;
+        padding-bottom:50px;
+        .l-musicbag{
+          padding:0.2rem 0.2rem 0.3rem;
           display: flex;
           flex-direction: row;
-          justify-content: flex-start;
-          align-items: center;
-          .warp{
-            width:0.6rem;
-            height:0.6rem;
-            .van-image{
-              .van-image__error{
-                background: rgba(255,243,247,0.8);
-                .van-image__error-icon{
-                  color:#FFDBDD
+          justify-content: space-between;
+          .l-left{
+            width:60%;
+            color:#CACACA;
+            .p-t{
+              font-size: 0.25rem;
+              line-height: 0.3rem;
+              font-weight: 600;
+            }
+            .p-c{
+              font-size: 0.2rem;
+              line-height: 0.3rem;
+            }
+          }
+          .l-right{
+            color:#676362;
+            span{
+              margin-top:8px;
+              padding:5px 13px;
+              display: inline-block;
+              border-radius: 0.20rem;
+              background: -webkit-linear-gradient(left, #FFE3DF , #D9B8B1); /* Safari 5.1 - 6.0 */
+              background: -o-linear-gradient(right, #FFE3DF, #D9B8B1); /* Opera 11.1 - 12.0 */
+              background: -moz-linear-gradient(right, #FFE3DF, #D9B8B1); /* Firefox 3.6 - 15 */
+              background: linear-gradient(to right, #FFE3DF , #D9B8B1); /* 标准的语法 */
+            }
+          }
+        }
+        .l-music-text{
+          padding:0.2rem;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-top:0.1rem;
+          background: rgba(255,255,255,0.1);
+          .l-left{
+            width:80%;
+            .p-t{
+              font-size: 0.22rem;
+              color:#F8DDD9;
+              line-height: 0.3rem;
+              font-weight: 600;
+            }
+            .p-c{
+              color:#C2C2C2;
+              line-height: 0.3rem;
+            }
+          }
+          .l-middle{
+            width:15%;
+            align-items:center;
+            .warp{
+              display: inline-block;
+              padding:5px;
+              background:#E24804 ;
+              color:#fff;
+              text-align: center;
+              border-radius: 3px;
+              font-size: 0.16rem;
+            }
+          }
+          .l-right{
+            align-items: center;
+            margin-top:0.15rem;
+            .l-icon{
+              font-size: 0.3rem;
+            }
+
+          }
+        }
+      }
+      .l-userList{
+        width:100%;
+        height:auto;
+        position: relative;
+        background: #fff;
+        border-radius: 0.15rem 0.15rem 0px 0px;
+        z-index: 5;
+        top:-1rem;
+        padding:0.1rem 0.2rem 0rem;
+        display: flex;
+        flex-direction: column;
+        .l-user{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          padding:0.2rem 0px;
+          margin-bottom:0.2rem;
+          .l-avator{
+            width:70%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            .warp{
+              width:0.6rem;
+              height:0.6rem;
+              .van-image{
+                .van-image__error{
+                  background: rgba(255,243,247,0.8);
+                  .van-image__error-icon{
+                    color:#FFDBDD
+                  }
+                }
+
+              }
+            }
+            .l-name{
+              padding-left:0.28rem;
+              margin-top:0.2rem;
+              font-size: 0.25rem;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+          }
+          .l-sign{
+            align-items: center;
+            .warp{
+              background: #FE3A3B;
+              border-radius:0.25rem;
+              display: inline-block;
+              padding:0.05rem 0.18rem;
+              color:#fff;
+              font-size: 0.22rem;
+              margin-top:0.15rem;
+              span{
+                margin-top:0.08rem;
+                font-size: 0.25rem;
+              }
+              i{
+                font-style: normal;
+              }
+            }
+          }
+
+        }
+        .l-grid{
+          .van-grid-item{
+            .van-grid-item__content{
+              .van-badge__wrapper{
+                .m_iconfont{
+                  font-size: 0.5rem;
+                  color:#EF2121
                 }
               }
+            }
+          }
 
-            }
-          }
-          .l-name{
-            padding-left:0.28rem;
-            margin-top:0.2rem;
-            font-size: 0.25rem;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-          }
         }
-        .l-sign{
-          align-items: center;
-          .warp{
-            background: #FE3A3B;
-            border-radius:0.25rem;
-            display: inline-block;
-            padding:0.05rem 0.18rem;
-            color:#fff;
-            font-size: 0.22rem;
-            margin-top:0.15rem;
-            span{
-              margin-top:0.08rem;
-              font-size: 0.25rem;
-            }
-            i{
-              font-style: normal;
-            }
-          }
-        }
-
-      }
-      .l-grid{
-        .van-grid-item{
-          .van-grid-item__content{
-            .van-badge__wrapper{
-              .m_iconfont{
-                font-size: 0.5rem;
-                color:#EF2121
+        .l-list{
+          border-top:1px solid #E6E6E6;
+          //border-bottom:1px solid #E9E9E9;
+          padding:0.2rem 0px;
+          ul{
+            li{
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              padding:0.2rem 0rem;
+              &.hasBorder{
+                border-bottom:1px solid #F1F1F1;
+              }
+              .left{
+                width:50%;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                color:#333333;
+                margin-top:0.1rem;
+                .icons{
+                  width:20%;
+                  .icon{
+                    font-size: 0.35rem;
+                    color:#4D4D4D;
+                  }
+                }
+                .text{
+                  font-size: 0.3rem;
+                }
+              }
+              .right{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+                .text{
+                  margin-right:0.1rem;
+                  color:#808080;
+                  font-size: 0.25rem;
+                }
               }
             }
           }
         }
-
       }
     }
-  }
 
+  }
+  .l-tabbar{
+    position: fixed;
+    -webkit-transform: translateZ(0);
+    bottom: 0px;
+    left:0px;
+    right:0px;
+    height:6vh;
+    background: #fff;
+    z-index: 6;
+    zoom:1;
+    width:100%;
+    border-top:1px solid #F5F5F5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.3rem;
+    .icon{
+      font-size: 0.35rem;
+    }
+    .text{
+      margin-left:0.05rem;
+    }
+    .left{
+      width:33%;
+      text-align: center;
+    }
+    .middle{
+      width:33%;
+      text-align: center;
+    }
+    .right{
+      width:33%;
+      text-align: center;
+    }
+  }
 }
 
 

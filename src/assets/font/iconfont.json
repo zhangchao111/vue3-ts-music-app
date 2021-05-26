@@ -6,6 +6,34 @@
   "description": "网易云音乐图标",
   "glyphs": [
     {
+      "icon_id": "502365",
+      "name": "唱片",
+      "font_class": "changpian",
+      "unicode": "e91f",
+      "unicode_decimal": 59679
+    },
+    {
+      "icon_id": "1008481",
+      "name": "退出",
+      "font_class": "tuichu",
+      "unicode": "e688",
+      "unicode_decimal": 59016
+    },
+    {
+      "icon_id": "9097246",
+      "name": "阅读页-夜间模式",
+      "font_class": "yueduye-yejianmoshi",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "10715436",
+      "name": "设置",
+      "font_class": "shezhi",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
       "icon_id": "672037",
       "name": "下一步",
       "font_class": "xiayibu",

@@ -1,5 +1,7 @@
 <template>
-fds
+<div style="height:2000px;background:pink;margin:0px 20px 50px;">
+    sfsdf
+</div>
 </template>
 <script lang="ts">
     import {
