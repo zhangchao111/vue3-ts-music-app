@@ -9,7 +9,7 @@
 
         </div>
         <div class="app-footer">
-            <footers></footers>
+            <footers @musicPlay="musicPlay"></footers>
         </div>
 
         <van-popup v-model:show="show" position="left" :style="{ height: '100%',width:'80%' }" :overlay-style="{backgroundColor: 'rgba(0,0,0,0.5)'}" teleport="body" :lazy-render="true" >
@@ -18,6 +18,7 @@
     </div>
 
 </template>
+
 <script lang="ts">
     import {
         defineComponent,
@@ -30,7 +31,10 @@
         watch,
         watchEffect
     } from 'vue'
-
+    interface musicObj{
+        type:String,
+        data:Object
+    }
     export default defineComponent({
         components: {},
         setup(prop,context) {
@@ -38,9 +42,13 @@
             const showPopup=()=>{
                 show.value = true;
             }
+            const musicPlay=(obj:musicObj)=>{
+                console.log(obj.type,1111)
+            }
             return {
                 show,
-                showPopup
+                showPopup,
+                musicPlay
             }
         },
         methods: {}

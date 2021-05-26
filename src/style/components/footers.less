@@ -5,6 +5,58 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  padding:0 0.1rem;
+  .f-left{
+    width:80%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    .warp{
+      width:100%;
+      height:100%;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      .img{
+        width:0.8rem;
+        overflow: hidden;
+        margin-top:0.1rem;
+        margin-left:0.1rem;
+        margin-right:0.2rem;
+        color:#333;
+      }
+      .tips{
+          .title{
+            line-height: 0.35rem;
+            font-size: 0.3rem;
+            color:#242424;
+          }
+          .descprition{
+            line-height: 0.3rem;
+            font-size: 0.25rem;
+            color:#898989;
+            text-align: left;
+            margin-top:0.1rem;
+          }
+      }
+    }
+  }
+  .f-right{
+    flex:1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    .icon{
+      font-size: 0.5rem;
+      color:#262626;
+    }
+    .playBtn{
+      width:50%;
 
+    }
+  }
 
 }
