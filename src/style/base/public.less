@@ -28,6 +28,7 @@
 body{
   widht:100%;
   height:100%;
+
 }
 ::-webkit-scrollbar {
   width: 0 !important;
@@ -79,15 +80,75 @@ body{
 
 .itipTitle{
   width:100%;
-  height:0.8rem;
-  border:1px solid red;
+  height:1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+
+  .i-t{
+    width:80%;
+    position: relative;
+    text-align: left;
+    font-size: 0.3rem;
+    color:#3B3B3B;
+  }
+  .i-r{
+    flex:1;
+    position: relative;
+    overflow: hidden;
+    color:#333333;
+    span{
+      display: inline-block;
+      padding:0.11rem 0.2rem 0.11rem 0.3rem;
+      border-radius: 15px;
+      border:1px solid #E6E6E6;
+      font-size: 0.2rem;
+    }
+  }
 }
 
 
+
+
+
+
+
+
+//1px 边框线
+.scaleTop{
+  position: relative;
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    background: #E6E6E6;
+    width: 100%;
+    height: 1px;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+
+  }
+}
+.scaleBottom{
+  position: relative;
+  &:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    background: #E6E6E6;
+    width: 100%;
+    height: 1px;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+
+  }
+}
 
 
 

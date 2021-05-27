@@ -22,10 +22,13 @@
 
         <div class="find-tjgd">
             <itips>
-                <template v-slot>111</template>
-<!--                v-slot:default == #default-->
+                <template #title>推荐歌单</template>
+                <template #more>更多 <van-icon name="arrow" /></template>
+<!--              v-slot == 默认  v-slot:default == #default-->
 <!--                <template v-slot:default>111</template>-->
             </itips>
+
+
         </div>
 
 

@@ -1,10 +1,15 @@
 <template>
     <div class="itipTitle">
-        <span class="i-t">444</span>
-        <span class="i-r">
-            <slot name="default"></slot>
+        <div class="i-t">
+            <slot name="title"></slot>
+        </div>
+        <div class="i-r">
+            <span>
+                <slot name="more"></slot>
+            </span>
+
 <!--            <slot></slot>-->
-        </span>
+        </div>
     </div>
 </template>
 <script lang="ts">
