@@ -78,30 +78,33 @@
             </itips>
             <div class="xstj">
                 <swiper
-                        :spaceBetween="0"
+                        :spaceBetween="10"
                         :loop="false"
                         :freeMode="true"
-                        :slidesPerView="3.5"
+                        :slidesPerView="1.1"
                         class="swiper-container"
                 >
-                    <swiper-slide class="xstj-item">
+                    <swiper-slide class="xstj-item" v-for="i in 5" :key="i">
                         <div class="warp">
-                            <div class="left">
-                                <van-image
-                                        fit="cover"
-                                        width="100%"
-                                        height="100%"
-                                        class="img"
-                                        loading-icon="user-circle-o"
-                                        error-icon="user-circle-o"
-                                        src="https://img.yzcdn.cn/vant/cat.jpeg"
-                                >
-                                </van-image>
+                            <div class="item" v-for="j in 3" :key="j">
+                                <div class="left">
+                                    <van-image
+                                            fit="cover"
+                                            width="100%"
+                                            height="100%"
+                                            class="img"
+                                            loading-icon="user-circle-o"
+                                            error-icon="user-circle-o"
+                                            src="https://img.yzcdn.cn/vant/cat.jpeg"
+                                    >
+                                    </van-image>
+                                </div>
+                                <div class="right">
+                                    <p class="p-t">sfsdf</p>
+                                    <p class="p-c">dfgdg</p>
+                                </div>
                             </div>
-                            <div class="right">
-                                <p>sfsdf</p>
-                                <p>dfgdg</p>
-                            </div>
+
                         </div>
                     </swiper-slide>
                 </swiper>
