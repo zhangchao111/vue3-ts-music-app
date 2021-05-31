@@ -46,6 +46,8 @@ import {
     GridItem,
     Tabbar,
     TabbarItem,
+    Tab,
+    Tabs
 } from 'vant'
 
 
@@ -95,7 +97,9 @@ const plugins = [
     Grid,
     GridItem,
     Tabbar,
-    TabbarItem,]
+    TabbarItem,
+    Tab,
+    Tabs]
 
 const vant = {
     install: function (app: App<Element>) {
