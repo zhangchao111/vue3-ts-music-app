@@ -19,8 +19,19 @@ const routes: Array<RouteRecordRaw> = [
         path: '/home',
         name: 'home',
         component: () => import(/* webpackChunkName: "find" */ '@/views/index/index.vue'),
+        meta: {
+          index: 1
+        }
       },
       ...modules,
+      {
+        path: '/video/details',
+        name: 'video-details',
+        component: () => import(/* webpackChunkName: "home" */ '@/views/video/details.vue'),
+        meta: {
+          index:2
+        }
+      },
     ]
   },
 

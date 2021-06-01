@@ -47,7 +47,7 @@ import {
     Tabbar,
     TabbarItem,
     Tab,
-    Tabs
+    Tabs,
 } from 'vant'
 
 
