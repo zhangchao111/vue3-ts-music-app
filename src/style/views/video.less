@@ -62,11 +62,13 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
+      padding-top:0.2rem;
       .item{
         flex:1;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+        margin-bottom:0.2rem;
         .left{
           width:1rem;
           height:1rem;
@@ -78,11 +80,166 @@
         }
         .right{
           flex:1;
+          position: relative;
+          overflow: hidden;
+          text-align: left;
+          .r-titles{
+            line-height: 0.4rem;
+            font-size: 0.25rem;
+            color:#6485AC;
+            span{
+              font-size: 0.25rem;
+              color:#737373;
 
+            }
+          }
+          .time{
+            margin:0.1rem 0 0.1rem;
+            line-height: 0.4rem;
+            font-size: 0.2rem;
+            color:#ADADAD;
+          }
+          .description{
+            position: relative;
+            overflow: hidden;
+            .p-ycyh{
+              line-height: 0.4rem;
+              color:#6283AB;
+              font-size: 0.25rem;
+              margin-bottom:0.2rem;
+            }
+            .p-text{
+              line-height: 0.4rem;
+              color:#313131;
+              font-size: 0.25rem;
+              margin-bottom:0.2rem;
+            }
+            .img{
+              border-radius: 0.18rem;
+              overflow: hidden;
+              position: relative;
+            }
+            .name{
+              display: flex;
+              border-radius: 0.18rem;
+              overflow: hidden;
+              flex-direction: row;
+              justify-content: flex-start;
+              background: #E9E9E9;
+              padding:0.2rem 0.15rem;
+              margin:0.2rem 0;
+              .avator{
+                height:0.7rem;
+                width:0.7rem;
+                position: relative;
+                overflow: hidden;
+                border-radius: 0.05rem;
+                margin-right:0.2rem;
+              }
+              .subtitle{
+                flex:1;
+                position: relative;
+                overflow: hidden;
+                p{
+                  line-height: 0.35rem;
+                  font-size: 0.25rem;
+                  &:nth-child(1){
+                    color:#2F2F2F
+                  }
+                  &:nth-child(2){
+                    font-size: 0.22rem;
+                    color:#757575
+                  }
+                }
+              }
+            }
+            .ins{
+              position: relative;
+              overflow: hidden;
+              span{
+                padding:0.1rem 0.2rem;
+                display: inline-block;
+                background: #E9E9E9;
+                color:#5D7A9A;
+                font-size: 0.25rem;
+                border-radius: 0.1rem;
+              }
+            }
+            .rate{
+              display: flex;
+              overflow: hidden;
+              flex-direction: row;
+              justify-content: space-around;
+              margin-top:0.2rem;
+              align-items: center;
+              .pub{
+                flex:0 1 25%;
+                color:#939393;
+                font-size: 0.25rem;
+                //line-height: 0.3rem;
+                .icon{
+                  font-size: 0.3rem;
+                  color:#626262;
+                  margin-right:0.06rem;
+                }
+                &.r-left{
+                  .icon{
+                    font-size: 0.3rem;
+                  }
+                }
+                &.middle1{
+                  text-align:center;
+                }
+                &.middle2{
+                  text-align:center;
+                }
+                &.r-right{
+                  text-align: right;
+                  .icon{
+                    color:#ACACAC;
+                  }
+
+                }
+              }
+
+            }
+          }
         }
       }
     }
+    .loadmores{
+      margin-top:0.2rem;
+      margin-bottom:0.1rem;
+      width:100%;
+      display: block;
+      padding:0.3rem 0;
+      line-height: 0.4rem;
+      text-align: center;
+      font-size: 0.3rem;
+      color:#616161;
+      border-color:#DDDDDD;
+    }
 
+  }
+  .gxqr{
+    //width:100%;
+    padding:0 0.2rem;
+    margin-bottom:0.4rem;
+    .gxqr-warp{
+      width:100%;
+      height:4rem;
+      .swiper-container{
+        width:100%;
+        height:100%;
+        position: relative;
+        overflow: hidden;
+        .gxqr-item{
+          //width:100%;
+          //height:100%;
+          position: relative;
+        }
+      }
+    }
   }
   .warp{
     width:100%;
