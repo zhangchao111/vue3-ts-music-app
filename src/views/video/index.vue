@@ -1,156 +1,22 @@
 <template>
+<!--    @touchstart="touchstarts($event)" @touchend="touchends($event)"-->
     <div class="video-warp">
-        <van-tabs v-model:active="active" swipeable>
-            <van-tab title="关注" name="gz">
-                <div class="gzwarp">
-                    <div class="titles">
-                        我的云圈 <span>(还没有假如云圈)</span>
-                    </div>
-                    <div class="qygc ">
-                        <span>去云圈广场逛逛</span>
-                        <van-icon name="arrow" />
-                    </div>
-                    <div class="items-warp">
-                        <div class="item">
-                            <div class="left">
-                                <van-image
-                                        fit="cover"
-                                        width="100%"
-                                        height="100%"
-                                        class="img"
-                                        loading-icon="user-circle-o"
-                                        error-icon="user-circle-o"
-                                        src="https://img.yzcdn.cn/vant/cat.jpeg"
-                                >
-                                </van-image>
-                            </div>
-                            <div class="right">
-                                <div class="r-titles">网易云音乐  <span>分享单曲</span></div>
-                                <div class="time">46分钟前</div>
-                                <div class="description">
-                                    <p class="p-ycyh">#云村夜话#</p>
-                                    <p class="p-text">听到诗，你第一时间能想到那首诗或者哪位诗人</p>
-                                    <div class="img">
-                                        <van-image
-                                                fit="cover"
-                                                width="100%"
-                                                height="100%"
-                                                class="img"
-                                                loading-icon="user-circle-o"
-                                                error-icon="user-circle-o"
-                                                src="https://img.yzcdn.cn/vant/cat.jpeg"
-                                        >
-                                        </van-image>
-                                    </div>
-                                    <div class="name">
-                                        <div class="avator">
-                                            <van-image
-                                                    fit="cover"
-                                                    width="100%"
-                                                    height="100%"
-                                                    class="img"
-                                                    loading-icon="user-circle-o"
-                                                    error-icon="user-circle-o"
-                                                    src="https://img.yzcdn.cn/vant/cat.jpeg"
-                                            >
-                                            </van-image>
-                                        </div>
-                                        <div class="subtitle">
-                                            <p>清平调（独唱版）</p>
-                                            <p>王菲</p>
-                                        </div>
-                                    </div>
-                                    <div class="ins">
-                                        <span>网易云音乐的云圈</span>
-                                    </div>
-                                    <div class="rate">
-                                            <div class="pub r-left"><span class="icon m_iconfont m_iconxunhuan1
-"></span> 1</div>
-                                            <div class="pub middle1"><span class="icon m_iconfont m_iconweibiaoti-
-"></span> 78</div>
-                                            <div class="pub middle2"><span class="icon m_iconfont m_iconzan
-"></span> 103</div>
-                                            <div class="pub r-right"><span class="icon m_iconfont m_iconziyuan
-"></span></div>
-                                     </div>
+        <div class="v-warp">
+            <div class="v-title">
+                <span :class="[active=='gz'?'actives':'','gz']" @click="goClick('gz')">关注</span>
+                <span :class="[active=='tj'?'actives':'','tj']" @click="goClick('tj')">推荐</span>
+                <div class="tipLine" :style="{'left':lefts+'rem'}"></div>
+            </div>
+        </div>
+        <transition name="van-slide-left">
+            <gz v-if="active=='gz'"></gz>
+        </transition>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="loadmores van-hairline--bottom">
-                        展开更多历史动态
-                        <van-icon name="arrow-down" />
-<!--                        <van-icon name="arrow-up" />-->
-                    </div>
+        <transition name="van-slide-right">
+            <tj v-if="active=='tj'" @tjpage="getTjpage"></tj>
+        </transition>
 
 
-                </div>
-
-                <div class="gxqr">
-                        <itips>
-                            <template #title>你可能感兴趣的人</template>
-                            <template #more>更多 <van-icon name="arrow" /></template>
-                        </itips>
-                    <div class="gxqr-warp">
-                        <swiper
-                                :spaceBetween="10"
-                                :loop="false"
-                                :slidesPerView="3"
-                                class="swiper-container"
-                        >
-                            <swiper-slide class="gxqr-item" v-for="i in 8" :key="i"  >
-                                dfgdfgdfg
-                            </swiper-slide>
-                        </swiper>
-                    </div>
-
-
-                </div>
-
-
-            </van-tab>
-            <van-tab title="推荐" name="tj">
-                <van-tabs v-model:active="activeItem" swipeable>
-                    <van-tab v-for="(item,index) in list" :title="item.title" :name="item.name" :key="index">
-                        <van-search v-model="videoSearch" v-if="activeItem=='gc'" placeholder="请输入搜索关键词" />
-                        <loads-more @onLoadMore="onLoadMore" ref="loadmores">
-                            <div class="warp">
-                                <div class="item" v-for="i in current" :key="index" @click="goLinks('/video/details',{})">
-                                    <div class="imgs">
-                                        <div class="icons">
-                                            <van-icon name="star-o" class="icont" />
-<!--                                            <van-icon name="fire-o" />-->
-                                        </div>
-                                        <van-image
-                                                fit="cover"
-                                                width="100%"
-                                                height="100%"
-                                                class="img"
-                                                loading-icon="user-circle-o"
-                                                error-icon="user-circle-o"
-                                                src="https://img.yzcdn.cn/vant/cat.jpeg"
-                                        >
-                                        </van-image>
-                                    </div>
-                                    <div class="content">
-                                        <div class="title van-multi-ellipsis--l2">
-                                            这是一段最多显示两行的文字，多余的内容会被省略 这是一段最多显示两行的文字，多余的内容会被省略 这是一段最多显示两行的文字，多余的内容会被省略
-                                        </div>
-                                        <div class="tips">
-                                            <div class="left"><span class="icon m_iconfont m_iconbofang1"></span>33.72万</div>
-                                            <div class="middle"><span class="icon m_iconfont m_iconzan"></span>8888</div>
-                                            <div class="right">{{parseInt(Math.random()*100+1)%3==1?'音乐安利':'混剪'}}</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </loads-more>
-
-                    </van-tab>
-                </van-tabs>
-            </van-tab>
-        </van-tabs>
     </div>
 
 </template>
@@ -168,52 +34,64 @@
         watch,
         watchEffect
     } from 'vue'
-    import { Swiper, SwiperSlide } from 'swiper/vue';
-    import 'swiper/swiper.min.css';
-    import 'swiper/components/pagination/pagination.less';
+    import gz from './gz.vue'
+    import tj from './tj.vue'
     import {useRouter } from 'vue-router';
     export default defineComponent({
         components: {
-            Swiper,
-            SwiperSlide,
+            gz,
+            tj
         },
         setup() {
             const router = useRouter();
             const active=ref("gz");
-            const activeItem=ref("gc")
-            const videoSearch=ref("");
-            const loadmores=ref(null);
-            const list=reactive([
-                {title:'广场',name:'gc',data:[]},
-                {title:'音乐人',name:'yyr',data:[]},
-                {title:'音乐安利',name:'yyal',data:[]},
-                {title:'演奏',name:'yz',data:[]},
-                {title:'MV',name:'mv',data:[]},
-                {title:'云音乐出品',name:'yyycp',data:[]},
-                {title:'生活',name:'sh',data:[]},
-                {title:'舞蹈',name:'wd',data:[]},
-                {title:'混剪',name:'hj',data:[]},
-            ])
-            const current=ref(6)
-            const  enableLoadMore=ref<boolean>(false);
-            const goLinks=(path:string,query:any)=>{
-                router.push({path,query})
+            const tjPage=ref('gc');
+            const lefts=ref(0);
+            const goClick=(val:string)=>{
+                active.value=val;
             }
-            const onLoadMore=(callback:any)=>{
-                current.value+=6;
-                callback()
-                console.log(22222)
+            const getTjpage=(val:string)=>{
+                tjPage.value=val;
             }
-            provide('enableLoadMore',enableLoadMore)
+            const startX=ref(0);
+            const startY=ref(0);
+            const touchstarts=(e:any)=>{
+                startX.value=e.targetTouches[0].pageX;
+                startY.value=e.targetTouches[0].pageY;
+            }
+            const touchends=(e:any)=>{
+                let endX=e.changedTouches[0].pageX;
+                let endY=e.changedTouches[0].pageY;
+                let x = endX-startX.value;
+                let y = endY-startY.value;
+                if(x<0){
+                    if(active.value=='gz'){
+                        active.value="tj";
+                        console.log('to right');
+                    }
+                }
+                if(x>0){
+                    console.log(active.value,tjPage.value,1231)
+                    if(active.value=='tj' && tjPage.value=='gc'){
+                        active.value="gz";
+                        console.log("to left")
+                    }
+                }
+            }
+            watch(active,(val)=>{
+                if(val=='tj'){
+                    lefts.value=0.9;
+                }else{
+                    lefts.value=0;
+                }
+            })
             return {
-                list,
                 active,
-                activeItem,
-                videoSearch,
-                goLinks,
-                onLoadMore,
-                current,
-                loadmores
+                lefts,
+                goClick,
+                touchstarts,
+                touchends,
+                getTjpage
             }
         },
         methods: {}
