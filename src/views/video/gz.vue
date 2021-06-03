@@ -15,6 +15,7 @@
                             width="100%"
                             height="100%"
                             class="img"
+                            lazy-load
                             loading-icon="user-circle-o"
                             error-icon="user-circle-o"
                             src="https://img.yzcdn.cn/vant/cat.jpeg"
@@ -33,6 +34,7 @@
                                     width="100%"
                                     height="100%"
                                     class="img"
+                                    lazy-load
                                     loading-icon="user-circle-o"
                                     error-icon="user-circle-o"
                                     src="https://img.yzcdn.cn/vant/cat.jpeg"
@@ -46,6 +48,7 @@
                                         width="100%"
                                         height="100%"
                                         class="img"
+                                        lazy-load
                                         loading-icon="user-circle-o"
                                         error-icon="user-circle-o"
                                         src="https://img.yzcdn.cn/vant/cat.jpeg"
@@ -98,13 +101,24 @@
             >
                 <swiper-slide class="gxqr-item" v-for="i in 8" :key="i"  >
                     <div class="pure_top purple"></div>
-                    <div class="icon_close"> X</div>
+                    <div class="icon_close"><span class="icon m_iconfont m_iconguanbi
+"></span> </div>
                     <div class="main">
                         <div class="img">
-
+                            <van-image
+                                    fit="cover"
+                                    width="100%"
+                                    height="100%"
+                                    class="img"
+                                    lazy-load
+                                    loading-icon="user-circle-o"
+                                    error-icon="user-circle-o"
+                                    src="https://img.yzcdn.cn/vant/cat.jpeg"
+                            >
+                            </van-image>
                         </div>
                         <div class="names">郭峰</div>
-                        <div class="description">歌手，制作人，词曲专家</div>
+                        <div class="description van-multi-ellipsis--l2">歌手，制作人，词曲专家词曲专家词曲专家</div>
                         <div class="btn">+ 关注</div>
                     </div>
                 </swiper-slide>

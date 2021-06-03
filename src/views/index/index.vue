@@ -1,6 +1,6 @@
 <template>
-<div style="height:2000px;background:pink;margin:0px 20px 50px;">
-    sfsdf
+<div class="user-warp">
+    div.
 </div>
 </template>
 <script lang="ts">
