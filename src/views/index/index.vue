@@ -33,8 +33,8 @@
             </van-grid-item>
         </van-grid>
         <div class="bottoms">
-            <div class="left">
-                <div class="left-l">
+            <div class="lefts">
+                <div class="left-ls">
                     <van-image
                             fit="cover"
                             width="100%"
@@ -46,16 +46,76 @@
                     >
                     </van-image>
                 </div>
-                <div class="left-r">
-                    <p class="p-t">234234234234</p>
+                <div class="left-rs">
+                    <p class="p-t"><span>直播</span>234234234234</p>
                 </div>
             </div>
-            <div class="right">
+            <div class="rights">
                 <span class="icon m_iconfont m_iconguanbi"></span>
             </div>
         </div>
+
     </div>
 
+    <div class="onekey">
+        <div class="lefts">
+            <van-image
+                    fit="cover"
+                    width="100%"
+                    height="100%"
+                    class="img"
+                    loading-icon="user-circle-o"
+                    error-icon="user-circle-o"
+                    src="https://img.yzcdn.cn/vant/cat.jpeg"
+            >
+            </van-image>
+        </div>
+        <div class="rights">
+            一键导入外部音乐
+        </div>
+    </div>
+    <div class="favitive">
+        <div class="tops">
+            <div class="left">
+                收藏歌单
+            </div>
+            <div class="right">
+                <span class="icon m_iconfont m_iconziyuan"></span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="items">
+
+            </div>
+            <div class="notlist">
+                暂无收藏的歌单
+            </div>
+        </div>
+    </div>
+    <div class="listPlays">
+        <div class="tops">
+            <div class="left">
+                歌单助手
+            </div>
+        </div>
+        <div class="content">
+            <div class="tips">
+                <div class="p-1">你可以从歌单中筛选出</div>
+                <div class="p-2">
+                    50首适合
+                    <span class="sh">适合</span>
+                    <span class="yd">运动</span>
+                    <span class="tdgr">听得高然</span>
+                    <span class="dy">电音</span>
+
+                </div>
+                <div class="p-3">
+                    <van-button type="danger" round size="small" style="padding:0 0.4rem">试试看</van-button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 
 </div>
